@@ -1,5 +1,7 @@
 <h1>Spaceballs</h1>
 
+See a live demo at [https://spaceballs-73bb7.web.app/](https://spaceballs-73bb7.web.app/)
+
 - [Features](#features)
 - [Goal](#goal)
 
