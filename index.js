@@ -1,11 +1,21 @@
 const path = require('path')
 const express = require('express')
-const app = express()
 const cors = require('cors');
+
+const livereload = require('livereload')
+const liveReloadServer = livereload.createServer()
+
+liveReloadServer.watch(path.join(__dirname, 'public'))
+
+const connectLivereload = require('connect-livereload')
+
+const app = express()
 
 app.use(cors({
   origin: '*'
 }));
+
+app.use(connectLivereload())
 
 app.use(express.static('public'))
 

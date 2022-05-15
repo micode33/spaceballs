@@ -1,0 +1,31 @@
+html,
+body {
+  background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald"
+}
+
+body {
+  font-family: "Open Sans"
+}
+
+.logo {
+  max-width: 42px;
+  max-height: 42px;
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+}

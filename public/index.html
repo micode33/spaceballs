@@ -1,57 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>My first three.js app</title>
-	<style>
-		body {
-			margin: 0;
-		}
-	</style>
+	<title>SPACEBALLS | micode33</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="/css/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-	<script src="js/three.js"></script>
-	<script src="js/WebGL.js"></script>
+	<!-- Navigation bar with social media icons -->
+	<div class="w3-bar w3-blue w3-hide-small w3-top">
+		<a target="_blank" href="https://instagram.com/micode33" class="w3-bar-item w3-button w3-blue w3-hover-blue"><img
+				src="/img/micode33-transparent-icon.png" class="logo"></a>
+		<a target="_blank" href="https://instagram.com/micode33" class="w3-bar-item w3-button w3-right"><i
+				class="fa fa-2x fa-instagram"></i></a>
+		<a target="_blank" href="https://twitter.com/micode33" class="w3-bar-item w3-button w3-right"><i
+				class="fa fa-2x fa-twitter"></i></a>
+		<a target="_blank" href="https://linkedin.com/in/micode33" class="w3-bar-item w3-button w3-right"><i
+				class="fa fa-2x fa-linkedin"></i></a>
+	</div>
 
-	<script>
-		if (WebGL.isWebGLAvailable()) {
+	<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+	<div class="w3-content" style="max-width:1600px">
 
-			// Initiate function or other initializations here
-			animate();
+		<!-- Image header -->
+		<header class="w3-display-container w3-wide" id="home">
+			<img class="w3-image" src="/img/spaceballs-background.png" alt="Fashion Blog" width="1600" height="1060">
+			<div class="w3-display-middle w3-padding-large">
+				<h1 class="w3-text-red w3-center">micode33's</h1>
+				<h1 class="w3-jumbo w3-text-white w3-hide-small"><b>SPACEBALLS</b></h1>
+				<h6>
+					<a href="/spaceballs.html"
+						class="w3-button w3-block w3-round-xxlarge w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">
+						<i class="fa fa-play"></i>
+						<span>PLAY</span>
+					</a>
+				</h6>
+			</div>
+		</header>
 
-		} else {
+		<!-- Footer -->
+		<footer class="w3-container w3-opacity w3-dark-grey" style="padding:16px">
+			<p>
+				<a class="w3-button w3-black w3-round-xlarge" href="https://github.com/micode33/spaceballs" target="_blank"><i
+						class="fa fa-fw fa-github"></i> <span>micode33</span></a>
+			</p>
+		</footer>
 
-			const warning = WebGL.getWebGLErrorMessage();
-			document.getElementById('container').appendChild(warning);
+	</div>
 
-		}
-		const scene = new THREE.Scene();
-		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-		const renderer = new THREE.WebGLRenderer();
-		renderer.setSize(window.innerWidth, window.innerHeight);
-		document.body.appendChild(renderer.domElement);
-
-		const geometry = new THREE.BoxGeometry();
-		const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-		const cube = new THREE.Mesh(geometry, material);
-		scene.add(cube);
-
-		camera.position.z = 5;
-
-		function animate() {
-			requestAnimationFrame(animate);
-
-			cube.rotation.x += 0.01;
-			cube.rotation.y += 0.01;
-
-			renderer.render(scene, camera);
-		};
-
-		animate();
-	</script>
 </body>
 
 </html>
